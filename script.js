@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('form').submit(function(event) {
         event.preventDefault(); // Mencegah form untuk melakukan submit
 
-        // Mengambil nilai dari input formm
+        // Mengambil nilai dari input form
         var nama = $('#nama').val();
         var alamat = $('#alamat').val();
         var telepon = $('#telepon').val();
@@ -18,8 +18,9 @@ $(document).ready(function() {
             'Pengalaman Kerja (jika ada): ' + pengalaman;
 
         // Mengirim pesan WhatsApp
-        window.open('https://web.whatsapp.com/send/?phone=6285299747503&text=' + encodeURIComponent(message));
+        window.open('https://wa.me/6285299747503?text=' + encodeURIComponent(message));
     });
+});
 
     $('.popup-image').magnificPopup({
         type: 'image',
