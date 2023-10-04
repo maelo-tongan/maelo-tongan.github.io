@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('form').submit(function(event) {
         event.preventDefault(); // Mencegah form untuk melakukan submit
 
-        // Mengambil nilai dari input form
+        // Mengambil nilai dari input formm
         var nama = $('#nama').val();
         var alamat = $('#alamat').val();
         var telepon = $('#telepon').val();
