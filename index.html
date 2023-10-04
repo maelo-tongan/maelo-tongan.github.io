@@ -1,57 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Formulir Pendaftaran Via WhatsApp</title>
-    <!-- Load Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Load CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>Website Github IO</title>
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 order-md-2">
-                <img src="gambar/afm-famplet.jpeg" class="img-fluid" alt="AFM Group">
+        <h2>Formulir Kontak</h2>
+        <form>
+            <div class="form-group row">
+                <label for="nama" class="col-sm-3 col-form-label">Nama</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda">
+                </div>
             </div>
-            <div class="col-md-6 order-md-1">
-                <h2>Formulir Pendaftaran via Whatsapp</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="nama">Nama Lengkap:</label>
-                        <input type="text" class="form-control" id="nama" placeholder="Masukkan nama lengkap Anda">
-                    </div>
-                    <div class="form-group">
-                        <label for="alamat">Alamat Lengkap:</label>
-                        <textarea class="form-control" id="alamat" rows="3" placeholder="Masukkan alamat lengkap Anda"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="telepon">Nomor Telepon:</label>
-                        <input type="tel" class="form-control" id="telepon" placeholder="Masukkan nomor telepon Anda">
-                    </div>
-                    <div class="form-group">
-                        <label for="pendidikan">Pendidikan Terakhir:</label>
-                        <select class="form-control" id="pendidikan">
-                            <option value="">-- Pilih Pendidikan Terakhir --</option>
-                            <option value="SMA/SMK">SMA/SMK</option>
-                            <option value="Diploma">Diploma</option>
-                            <option value="Sarjana">Sarjana</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="pengalaman">Pengalaman Kerja (jika ada):</label>
-                        <textarea class="form-control" id="pengalaman" rows="3" placeholder="Masukkan pengalaman kerja Anda"></textarea>
-                    </div>
+            <div class="form-group row">
+                <label for="email" class="col-sm-3 col-form-label">Email</label>
+                <div class="col-sm-9">
+                    <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="pesan" class="col-sm-3 col-form-label">Pesan</label>
+                <div class="col-sm-9">
+                    <textarea class="form-control" id="pesan" rows="5" placeholder="Masukkan pesan Anda"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-9 offset-sm-3">
                     <button type="submit" class="btn btn-primary">Kirim</button>
-                </form>
+                </div>
             </div>
-        </div>
+        </form>
+        <img src="https://via.placeholder.com/600x400" alt="Gambar" class="img-fluid">
     </div>
-
-    <!-- Load Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Load JavaScript -->
-    <script src="script.js"></script>
 </body>
 </html>
