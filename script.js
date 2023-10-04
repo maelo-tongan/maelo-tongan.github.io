@@ -17,23 +17,11 @@ $(document).ready(function() {
             'Pendidikan Terakhir: ' + pendidikan + '\n' +
             'Pengalaman Kerja (jika ada): ' + pengalaman;
 
-        // Mengirim pesan WhatsApp
-        window.open('https://wa.me/6285299747503?text=' + encodeURIComponent(message));
-    });
-});
-
-    $('.popup-image').magnificPopup({
-        type: 'image',
-        closeOnContentClick: true,
-        closeBtnInside: false,
-        fixedContentPos: true,
-        mainClass: 'mfp-no-margins mfp-with-zoom',
-        image: {
-            verticalFit: true
-        },
-        zoom: {
-            enabled: true,
-            duration: 300
+        // Mengarahkan pengguna ke aplikasi WhatsApp di Android atau ke WhatsApp Web di desktop/komputer
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            window.location.href = 'whatsapp://send?phone=6285299747503&text=' + encodeURIComponent(message);
+        } else {
+            window.open('https://web.whatsapp.com/send/?phone=6285299747503&text=' + encodeURIComponent(message));
         }
     });
 });
