@@ -20,4 +20,19 @@ $(document).ready(function() {
         // Mengirim pesan WhatsApp
         window.open('https://web.whatsapp.com/send/?phone=6285299747503&text=' + encodeURIComponent(message));
     });
+
+    $('.popup-image').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        closeBtnInside: false,
+        fixedContentPos: true,
+        mainClass: 'mfp-no-margins mfp-with-zoom',
+        image: {
+            verticalFit: true
+        },
+        zoom: {
+            enabled: true,
+            duration: 300
+        }
+    });
 });
