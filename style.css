@@ -41,3 +41,22 @@ h2 {
         max-width: 100%;
     }
 }
+
+@media (max-width: 767px) {
+    .form-group label {
+        margin-bottom: 5px;
+    }
+
+    .form-control {
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        margin-top: 10px;
+    }
+
+    img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
