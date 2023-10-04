@@ -1,5 +1,4 @@
 .container {
-    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -25,5 +24,14 @@ h2 {
 
     .order-md-2 {
         order: 1;
+    }
+
+    .col-md-6 {
+        width: 50%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
     }
 }
