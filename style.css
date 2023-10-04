@@ -1,6 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 0;
+    padding: 20px;
 }
 
 .container {
@@ -10,7 +14,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 h2 {
