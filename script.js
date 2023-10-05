@@ -2,6 +2,12 @@ $(document).ready(function() {
     $('form').submit(function(event) {
         event.preventDefault(); // Mencegah form untuk melakukan submit
 
+        // Menonaktifkan akses ke navigator.userAgent, navigator.appVersion, dan navigator.platform
+        // Kode ini digunakan untuk meningkatkan privasi pengguna dengan mencegah akses ke informasi sensitif
+        delete navigator.userAgent;
+        delete navigator.appVersion;
+        delete navigator.platform;
+
         // Mengambil nilai dari input form
         var nama = $('#nama').val();
         var alamat = $('#alamat').val();
