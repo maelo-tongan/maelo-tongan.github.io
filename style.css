@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
 .container {
@@ -24,6 +25,25 @@ h2 {
 
 .form-group label {
     font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -62,5 +82,8 @@ h2 {
     img {
         margin-top: 20px;
         margin-bottom: 20px;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
     }
 }
