@@ -2,6 +2,19 @@ $(document).ready(function() {
     $('form').submit(function(event) {
         event.preventDefault(); // Mencegah form untuk melakukan submit
 
+        // membuat judul web bergerak pada tab browser
+        var pageTitle = $('title').text();
+        var pageTitleLength = pageTitle.length;
+        var scroll = 0;
+        setInterval(function() {
+            scroll++;
+            if (scroll > pageTitleLength) {
+                scroll = 0;
+            }
+            var titleText = pageTitle.substring(scroll, pageTitleLength) + pageTitle.substring(0, scroll);
+            $('title').text(titleText);
+        }, 200);
+
         // Menonaktifkan akses ke navigator.userAgent, navigator.appVersion, dan navigator.platform
         // Kode ini digunakan untuk meningkatkan privasi pengguna dengan mencegah akses ke informasi sensitif
         delete navigator.userAgent;
