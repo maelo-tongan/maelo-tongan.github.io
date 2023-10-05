@@ -6,7 +6,6 @@ body {
     margin: 0;
     padding: 20px;
     font-family: Arial, sans-serif;
-    overflow: hidden;
 }
 
 .container {
@@ -48,6 +47,10 @@ h2 {
 }
 
 @media (min-width: 768px) {
+    body {
+        overflow: hidden;
+    }
+
     .order-md-1 {
         order: 2;
     }
