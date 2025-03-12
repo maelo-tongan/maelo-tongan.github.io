@@ -6,6 +6,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <style>
+        .qrcode {
+            width: 20vw; /* Mengatur lebar QR Code menjadi 20% dari lebar viewport */
+            height: auto; /* Tinggi otomatis untuk menjaga rasio aspek */
+        }
+    </style>
 </head>
 <body class="bg-gray-100 p-6 font-sans">
 
@@ -13,55 +19,55 @@
     <div class="flex flex-wrap justify-center mb-6">
         <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('yuli_bram')">
             <p class="text-center">Yuli & Bram</p>
-            <div id="qrcode-yuli_bram" class="flex justify-center mt-2"></div>
+            <div id="qrcode-yuli_bram" class="flex justify-center mt-2 qrcode"></div>
         </div>
         <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('Angel')">
             <p class="text-center">Angel</p>
-            <div id="qrcode-Angel" class="flex justify-center mt-2"></div>
+            <div id="qrcode-Angel" class="flex justify-center mt-2 qrcode"></div>
         </div>
         <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('aditya')">
             <p class="text-center">Aditya</p>
-            <div id="qrcode-aditya" class="flex justify-center mt-2"></div>
+            <div id="qrcode-aditya" class="flex justify-center mt-2 qrcode"></div>
         </div>
         <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('anggi')">
             <p class="text-center">Anggi</p>
-            <div id="qrcode-anggi" class="flex justify-center mt-2"></div>
+            <div id="qrcode-anggi" class="flex justify-center mt-2 qrcode"></div>
         </div>
         <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('anggun')">
             <p class="text-center">Anggun</p>
-            <div id="qrcode-anggun" class="flex justify-center mt-2"></div>
+            <div id="qrcode-anggun" class="flex justify-center mt-2 qrcode"></div>
         </div>
         <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('dendo')">
             <p class="text-center">Dendo</p>
-            <div id="qrcode-dendo" class="flex justify-center mt-2"></div>
+            <div id="qrcode-dendo" class="flex justify-center mt-2 qrcode"></div>
         </div>
         <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('desnalia')">
             <p class="text-center">Desnalia</p>
-            <div id="qrcode-desnalia" class="flex justify-center mt-2"></div>
+            <div id="qrcode-desnalia" class="flex justify-center mt-2 qrcode"></div>
         </div>
         <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('dian')">
             <p class="text-center">Dian</p>
-            <div id="qrcode-dian" class="flex justify-center mt-2"></div>
+            <div id="qrcode-dian" class="flex justify-center mt-2 qrcode"></div>
         </div>
         <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('intan')">
             <p class="text-center">Intan</p>
-            <div id="qrcode-intan" class="flex justify-center mt-2"></div>
+            <div id="qrcode-intan" class="flex justify-center mt-2 qrcode"></div>
         </div>
-        <div class="border -2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('lola')">
+        <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('lola')">
             <p class="text-center">Lola</p>
-            <div id="qrcode-lola" class="flex justify-center mt-2"></div>
+            <div id="qrcode-lola" class="flex justify-center mt-2 qrcode"></div>
         </div>
         <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('respin')">
             <p class="text-center">Respin</p>
-            <div id="qrcode-respin" class="flex justify-center mt-2"></div>
+            <div id="qrcode-respin" class="flex justify-center mt-2 qrcode"></div>
         </div>
         <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('seli')">
             <p class="text-center">Seli</p>
-            <div id="qrcode-seli" class="flex justify-center mt-2"></div>
+            <div id="qrcode-seli" class="flex justify-center mt-2 qrcode"></div>
         </div>
         <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('tugus')">
             <p class="text-center">Tugus</p>
-            <div id="qrcode-tugus" class="flex justify-center mt-2"></div>
+            <div id="qrcode-tugus" class="flex justify-center mt-2 qrcode"></div>
         </div>
     </div>
 
@@ -76,8 +82,8 @@
             // Generate QR Code
             new QRCode(document.getElementById(`qrcode-${name}`), {
                 text: url,
-                width: 75, // 2cm in pixels (approximately 75.59 pixels)
-                height: 75 // 2cm in pixels (approximately 75.59 pixels)
+                width: 200, // Ukuran lebar QR Code dalam piksel
+                height: 200 // Ukuran tinggi QR Code dalam piksel
             });
         }
     </script>
