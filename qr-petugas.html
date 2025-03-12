@@ -1,0 +1,82 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Petugas Penagih</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body class="bg-gray-100 p-6 font-sans">
+
+    <h1 class="text-3xl font-bold mb-6 text-center">QR Code Petugas Penagih</h1>
+    <div class="flex flex-wrap justify-center mb-6">
+        <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('Angel')">
+            <p class="text-center">Angel</p>
+            <div id="qrcode-Angel" class="flex justify-center mt-2"></div>
+        </div>
+        <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('aditya')">
+            <p class="text-center">Aditya</p>
+            <div id="qrcode-aditya" class="flex justify-center mt-2"></div>
+        </div>
+        <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('anggi')">
+            <p class="text-center">Anggi</p>
+            <div id="qrcode-anggi" class="flex justify-center mt-2"></div>
+        </div>
+        <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('anggun')">
+            <p class="text-center">Anggun</p>
+            <div id="qrcode-anggun" class="flex justify-center mt-2"></div>
+        </div>
+        <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('dendo')">
+            <p class="text-center">Dendo</p>
+            <div id="qrcode-dendo" class="flex justify-center mt-2"></div>
+        </div>
+        <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('desnalia')">
+            <p class="text-center">Desnalia</p>
+            <div id="qrcode-desnalia" class="flex justify-center mt-2"></div>
+        </div>
+        <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('dian')">
+            <p class="text-center">Dian</p>
+            <div id="qrcode-dian" class="flex justify-center mt-2"></div>
+        </div>
+        <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('intan')">
+            <p class="text-center">Intan</p>
+            <div id="qrcode-intan" class="flex justify-center mt-2"></div>
+        </div>
+        <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('lola')">
+            <p class="text-center">Lola</p>
+            <div id="qrcode-lola" class="flex justify-center mt-2"></div>
+        </div>
+        <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('respin')">
+            <p class="text-center">Respin</p>
+            <div id="qrcode-respin" class="flex justify-center mt-2"></div>
+        </div>
+        <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('seli')">
+            <p class="text-center">Seli</p>
+            <div id="qrcode-seli" class="flex justify-center mt-2"></div>
+        </div>
+        <div class="border-2 border-blue-500 text-blue-500 px-4 py-2 m-2 rounded cursor-pointer" onclick="generateQR('tugus')">
+            <p class="text-center">Tugus</p>
+            <div id="qrcode-tugus" class="flex justify-center mt-2"></div>
+        </div>
+    </div>
+
+    <script>
+        function generateQR(name) {
+            // Bersihkan QR Code sebelumnya
+            document.getElementById(`qrcode-${name}`).innerHTML = "";
+
+            // Buat URL berdasarkan nama
+            const url = `https://maelo-tongan.github.io/qr-codeku.io/petugas/penagih/${name}.html`;
+
+            // Generate QR Code
+            new QRCode(document.getElementById(`qrcode-${name}`), {
+                text: url,
+                width: 75, // 2cm in pixels (approximately 75.59 pixels)
+                height: 75 // 2cm in pixels (approximately 75.59 pixels)
+            });
+        }
+    </script>
+
+</body>
+</html>
